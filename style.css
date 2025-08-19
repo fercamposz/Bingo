@@ -1,7 +1,9 @@
 body {
     font-family: 'Comic Sans MS', cursive, sans-serif;
-    background-color: #ffe6f2;
+    background-color: #bfb7ff;
     text-align: center;
+    background-image: url("BINGO2.png");
+    background-position: center;
     margin: 0;
     padding: 20px;
 }
@@ -13,55 +15,61 @@ h1 {
     text-shadow: 2px 2px 5px #00000020;
 }
 
-
-/* container da imagem */
-
 .bingoContainer {
     position: relative;
     width: 853px;
-    /* largura real do PNG */
     height: 768px;
-    /* altura real do PNG */
     margin: 0 auto;
-    background: url("BINGO.png") no-repeat center;
-    background-size: cover;
 }
 
-
-/* grid dos quadrados */
-
-.bingoCard {
+.bingoContainer::before {
+    content: "";
     position: absolute;
-    top: 150px;
-    /* ajusta posição vertical */
-    left: 88px;
-    /* ajusta posição horizontal */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url("BINGO.png") no-repeat center;
+    background-size: cover;
+    z-index: 20;          
+    pointer-events: none;  
+}
+
+#bingoCard {
     display: grid;
-    grid-template-columns: repeat(5, 135px);
-    /* largura de cada quadrado */
-    grid-template-rows: repeat(5, 115px);
-    /* altura de cada quadrado */
+    grid-template-columns: repeat(5, 1fr);
     gap: 5px;
-    /* espaçamento */
+    width: 300px;
+    margin: 143px;
+    padding-top: 160px;
+
 }
 
 .cell {
-    font-size: 28px;
-    font-weight: bold;
-    color: white;
+    width:105px;
+    height:105px;
     display: flex;
     align-items: center;
     justify-content: center;
-    text-shadow: 2px 2px 5px #000;
+    background: #d7b3ff;
+    border: 2px solid #5a00cc;
+    font-size: 30px;
+    font-weight: bold;
+    border-radius: 6px;
     cursor: pointer;
+    user-select: none;
+    color: white;
+    text-shadow: 2px 2px 5px #000;
     transition: 0.3s;
+    
 }
 
-.marcado {
-    background-color: rgba(255, 102, 178, 0.6);
+.cell.marcado {
+    background: #b780ff;
+    color: white;
     border-radius: 15px;
-    transform: scale(1.1);
 }
+
 
 .btn {
     padding: 12px 20px;
@@ -72,7 +80,7 @@ h1 {
     font-size: 18px;
     font-weight: bold;
     cursor: pointer;
-    margin-top: 20px;
+    margin: 10px 5px;
     transition: 0.3s;
 }
 
@@ -83,9 +91,10 @@ h1 {
 
 .sorteado {
     margin-top: 15px;
-    font-size: 22px;
+    font-size: 30px;
     font-weight: bold;
     color: #8b5cf6;
+    
 }
 
 .frase {
@@ -93,4 +102,9 @@ h1 {
     font-size: 20px;
     font-style: italic;
     color: #ff4081;
+}
+
+.resultado {
+    font-size: 80px;
+    font-weight: bold;
 }

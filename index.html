@@ -2,21 +2,29 @@
 <html lang="pt-BR">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bingo Kuromi</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bingou</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    <h1> Bingo da Kuromi </h1>
+  
+  <div class="bingoContainer">
+    <div class="bingoCard" id="bingoCard"></div>
+  </div>
+  <div class="resultado" id="resultado"></div>
 
-    <div class="bingoContainer">
-        <div class="bingoCard" id="bingoCard"></div>
-    </div>
-
+  <div class="botoes">
     <button class="btn" onclick="sortearNumero()">Sortear Número</button>
-    <div class="sorteado" id="sorteado">Número sorteado: --</div>
-    <div class="frase" id="frase"></div>
+    <button class="btn" onclick="verificarBingo()">BINGOU</button>
+    <button class="btn" onclick="gerarCartela()">Nova Cartela</button>
+  </div>
+
+  <div class="sorteado" id="sorteado">Número sorteado: </div>
+  <div class="frase" id="frase"></div>
+  
+  <script src="script.js"></script>
 </body>
 
 </html>
