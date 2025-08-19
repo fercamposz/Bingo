@@ -2,30 +2,30 @@
 <html lang="pt-BR">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Bingou</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bingou</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-  
-  <div class="bingoContainer">
-    <div class="bingoCard" id="bingoCard"></div>
-  </div>
-  <div class="resultado" id="resultado"></div>
 
-  <div class="botoes">
-    <button class="btn" onclick="sortearNumero()">Sortear Número</button>
-    <button class="btn" onclick="verificarBingo()">BINGOU</button>
-    <button class="btn" onclick="gerarCartela()">Nova Cartela</button>
-  </div>
+    <div class="bingoContainer">
+        <div class="bingoCard" id="bingoCard"></div>
+    </div>
+    <div class="resultado" id="resultado"></div>
 
-  <div class="sorteado" id="sorteado">Número sorteado: </div>
-  <div class="frase" id="frase"></div>
-  
-  <script src="script.js"></script>
-  <audio id="audioBingo" src="bingou.mp3"></audio>
+    <div class="botoes">
+        <button class="btn" onclick="sortearNumero()">Sortear Número</button>
+        <button class="btn" onclick="verificarBingo()">BINGOU</button>
+        <button class="btn" onclick="gerarCartela()">Nova Cartela</button>
+    </div>
+
+    <div class="sorteado" id="sorteado">Número sorteado: </div>
+    <div class="frase" id="frase"></div>
+
+    <script src="script.js"></script>
+    <audio id="audioBingo" src="bingou.mp3"></audio>
 </body>
 
 </html>

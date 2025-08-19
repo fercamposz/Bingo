@@ -1,0 +1,96 @@
+body {
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+    background-color: #d6caff !important;
+    text-align: center;
+    margin: 0px;
+    padding: 20px;
+}
+
+
+/* bolinha central */
+
+.foto {
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+#bola {
+    font-size: 50px;
+    font-weight: bold;
+    color: #000000;
+    justify-content: center;
+}
+
+
+/* botões */
+
+.btn {
+    padding: 20px 40px;
+    border: none;
+    border-radius: 20px;
+    background-color: #ff66b2;
+    color: white;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+    align-items: center;
+}
+
+.btn:hover {
+    background-color: #ff3385;
+    transform: scale(1.05);
+}
+
+#mensagem {
+    margin-top: 15px;
+    font-size: 50px;
+    font-weight: bold;
+    color: red;
+}
+
+
+/* área do BINGO */
+
+#bingoBoard {
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+    gap: 120px;
+}
+
+.coluna {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.letra {
+    font-size: 200px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.numeros {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+
+/* bolinhas do histórico */
+
+.numero {
+    background: white;
+    border: 5px solid #54009d;
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 50px;
+}

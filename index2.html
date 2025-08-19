@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sorteador Bingo</title>
+    <link rel="stylesheet" href="style2.css">
+</head>
+
+<body>
+
+
+    <div id="bola"></div>
+
+    <div class="foto">
+        <img src="sortear.png" alt="sorteador" />
+    </div>
+
+    <div class="botoes">
+        <button class="btn" onclick="sortear()">Sortear</button>
+        <button class="btn" onclick="zerar()">Zerar</button>
+    </div>
+
+    <div id="mensagem"></div>
+
+    <!-- Cabeçalho BINGO -->
+    <div id="bingoBoard">
+        <div class="coluna">
+            <div class="letra">B</div>
+            <div id="col-B" class="numeros"></div>
+        </div>
+        <div class="coluna">
+            <div class="letra">I</div>
+            <div id="col-I" class="numeros"></div>
+        </div>
+        <div class="coluna">
+            <div class="letra">N</div>
+            <div id="col-N" class="numeros"></div>
+        </div>
+        <div class="coluna">
+            <div class="letra">G</div>
+            <div id="col-G" class="numeros"></div>
+        </div>
+        <div class="coluna">
+            <div class="letra">O</div>
+            <div id="col-O" class="numeros"></div>
+        </div>
+    </div>
+
+    <script src="script2.js"></script>
+</body>
+
+</html>
