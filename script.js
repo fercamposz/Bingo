@@ -3,6 +3,7 @@ function gerarCartela() {
   const card = document.getElementById("bingoCard");
   card.innerHTML = "";
 
+  // NAO ESQUECER DE DEFINIR OS NUMEROS
   const ranges = [
     [1, 15],  
     [16, 30], 
@@ -63,7 +64,7 @@ const frases = {
 
 function sortearNumero() {
   if (sorteados.length >= 75) {
-    document.getElementById("sorteado").innerText = "todos numeros ja foi";
+    document.getElementById("sorteado").innerText = "ACABOU";
     document.getElementById("frase").innerText = "";
     return;
   }
@@ -100,14 +101,18 @@ function verificarBingo() {
   if ([0,1,2,3,4].every(i => grid[i][i])) bingo = true;
   if ([0,1,2,3,4].every(i => grid[i][4-i])) bingo = true;
 
-  const res = document.getElementById("resultado");
-  if (bingo) {
+ const res = document.getElementById("resultado");
+if (bingo) {
     res.innerText = " BINGO!!! ";
     res.style.color = "#00c853";
-  } else {
+
+    const audio = document.getElementById("audioBingo");
+    audio.currentTime = 0; 
+    audio.play();
+} else {
     res.innerText = "nao bingou";
     res.style.color = "#ff1744";
-  }
+}
 }
 
 gerarCartela();
