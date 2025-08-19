@@ -12,6 +12,7 @@ function gerarCartela() {
     [61, 75], 
   ];
 
+  // gerar 5 numero aleatorio em cd colun
   const colData = []; 
   for (let c = 0; c < 5; c++) {
     const [min, max] = ranges[c];
@@ -25,12 +26,13 @@ function gerarCartela() {
     colData[c] = nums;
   }
 
+  // cria div para cad quadrado foda dms
   for (let l = 0; l < 5; l++) {       
     for (let c = 0; c < 5; c++) {    
       const cell = document.createElement("div");
       cell.classList.add("cell");
 
-   
+  //  kuromi no meio
       if (l === 2 && c === 2) {
     cell.innerText = "";
     cell.classList.add("marcado"); 
@@ -39,6 +41,7 @@ function gerarCartela() {
     cell.textContent = valor;
     cell.setAttribute("data-numero", valor);
 
+    // para marca numero
     cell.addEventListener("click", () => {
         cell.classList.toggle("marcado");
     });
@@ -75,6 +78,7 @@ function sortearNumero() {
   } while (sorteados.includes(num));
   sorteados.push(num);
 
+  // definir a letra para aparecer no sorteador
   const letra = num <= 15 ? "B" : num <= 30 ? "I" : num <= 45 ? "N" : num <= 60 ? "G" : "O";
   document.getElementById("sorteado").innerText = "Número sorteado: " + letra + " " + num;
 
