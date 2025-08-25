@@ -2,28 +2,29 @@ body {
     font-family: 'Comic Sans MS', cursive, sans-serif;
     background-color: #d6caff;
     text-align: center;
+    background-image: url("fundo.png");
+    background-position: center;
     margin: 0px;
     padding: 20px;
 }
 
 
-/* bolinha central */
+/* bolinha central e foto */
 
 .foto {
     width: 100%;
-    height: 100%;
-    align-items: center;
-    z-index: -15;
+    height: 50rem;
+    bottom: 0;
 }
 
 #bola {
     font-size: 60px;
     font-weight: bold;
     color: #000000;
-    margin-top: 28rem;
+    margin-top: 28.5rem;
     z-index: 1;
     position: absolute;
-    left: 65rem;
+    left: 89.3rem;
 }
 
 .todo {
@@ -39,34 +40,33 @@ body {
     padding: 20px 40px;
     border: none;
     border-radius: 20px;
-    background-color: #ff66b2;
-    color: white;
+    background-color: #e5dcff;
+    color: rgb(0, 0, 0);
     font-size: 40px;
     font-weight: bold;
     cursor: pointer;
     transition: 0.3s;
-    align-items: center;
 }
 
 .btn:hover {
-    background-color: #ff3385;
+    background-color: #a291dc;
     transform: scale(1.05);
 }
 
 #mensagem {
-    margin-top: 15px;
-    font-size: 50px;
+    margin-top: 50px;
+    font-size: 90px;
     font-weight: bold;
-    color: red;
+    color: rgb(218, 0, 0);
 }
 
 
-/* área do BINGO */
+/* área do bingo  */
 
 #bingoBoard {
     display: flex;
     justify-content: center;
-    margin-top: 40px;
+    margin-top: 300px;
     gap: 120px;
 }
 

@@ -10,25 +10,24 @@
 
 <body>
 
-    </div class="todo">
+    <div class="todo">
         <div id="bola"></div>
 
         <div class="foto">
             <img src="sortear.png" alt="sorteador" />
         </div>
 
-    <div>
+        <div class="botoes">
+            <button class="btn" onclick="sortear()">Sortear</button>
+            <button class="btn" onclick="zerar()">Zerar</button>
+        </div>
 
-    
-
-    <div class="botoes">
-        <button class="btn" onclick="sortear()">Sortear</button>
-        <button class="btn" onclick="zerar()">Zerar</button>
     </div>
 
     <div id="mensagem"></div>
 
-    <!--- Cabeçalho BINGO ----->
+
+    <!--- letras do bingo ----->
     <div id="bingoBoard">
         <div class="coluna">
             <div class="letra">B</div>
@@ -51,6 +50,7 @@
             <div id="col-O" class="numeros"></div>
         </div>
     </div>
+
 
     <script src="script2.js"></script>
 </body>

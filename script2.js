@@ -1,7 +1,7 @@
 let numeros = Array.from({ length: 75 }, (_, i) => i + 1);
 let sorteados = [];
 
-// retorna a letra BINGO conforme regra
+// letra do bingo de acordo com a regra
 function getLetra(num) {
     if (num <= 15) return "B";
     if (num <= 30) return "I";
@@ -22,7 +22,7 @@ function sortear() {
 
     const letra = getLetra(num);
 
-    // exibe no centro
+    // exibe no centro o numro
     document.getElementById("bola").innerText = letra + " " + num;
 
     // adiciona na coluna certa
@@ -32,6 +32,7 @@ function sortear() {
     document.getElementById("col-" + letra).appendChild(div);
 }
 
+// zera os numeros sorteados e começa denovo
 function zerar() {
     numeros = Array.from({ length: 75 }, (_, i) => i + 1);
     sorteados = [];
