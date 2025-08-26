@@ -1,43 +1,44 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Sorteador Bingo</title>
-        <link rel="stylesheet" href="style2.css" />
-        <script src="script2.js" defer></script>
-    </head>
-    <body>
-        <!-- nav bar -->
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sorteador Bingo</title>
+    <link rel="stylesheet" href="style2.css" />
+    <script src="script2.js" defer></script>
+</head>
+
+<body>
+
+    <!-- SEÇÃO PRINCIPAL -->
+    <main>
+
         <header class="navBar">
-            <div class="logoContainer">
-                <img src="./imagens/logo.png" alt="Logo" class="logoNav" />
-            </div>
+            <nav>
+                <div class="logoContainer">
+                    <img src="./imagens/logo.png" alt="Logo" class="logoNav" />
+                </div>
                 <a href="index.html">
                     <button class="btnCartela">CARTELA</button>
                 </a>
+            </nav>
         </header>
 
-        <!-- SEÇÃO PRINCIPAL -->
-        <main class="todo">
-            <!-- NUMERO SORTEADO -->
-            <div id="bola"></div>
+        <!-- NUMERO SORTEADO -->
+        <div id="bola"></div>
 
-            <!-- IMAGEM DO SORTEADOR -->
-            <div class="foto">
-                <img src="./imagens/sortear.png" alt="sorteador" />
-            </div>
+        <!-- IMAGEM DO SORTEADOR -->
+        <div class="foto">
+            <img src="./imagens/sortear.png" alt="sorteador" />
+        </div>
 
-            <!-- BOTÕES -->
-            <div class="botoes">
-                <button class="btn" onclick="sortear()">
-                    Sortear
-                </button>
-                <button class="btn" onclick="zerar()">
-                    Zerar
-                </button>
-            </div>
-        </main>
+        <!-- BOTÕES -->
+        <div class="botoes">
+            <button class="btn" onclick="sortear()">Sortear</button>
+            <button class="btn" onclick="zerar()">Zerar</button>
+        </div>
+
 
         <!-- MENSAGEM -->
         <div id="mensagem"></div>
@@ -75,9 +76,11 @@
             <!-- COLUNA O -->
             <div class="coluna">
                 <div class="letra">O</div>
-                
+
                 <div id="colO" class="numeros"></div>
             </div>
         </section>
-    </body>
+    </main>
+</body>
+
 </html>

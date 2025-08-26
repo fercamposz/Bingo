@@ -27,7 +27,7 @@ function gerarCartela() {
         colData[c] = nums;
     }
 
-// cria a cartela
+    // cria a cartela
     for (let l = 0; l < 5; l++) {
         for (let c = 0; c < 5; c++) {
             const criar = document.createElement("div");
@@ -42,14 +42,14 @@ function gerarCartela() {
                 criar.setAttribute("data-numero", valor);
                 criar.addEventListener("click", () => {
                     criar.classList.add("cartelaMarcado");
-                    checarBingo(false); 
+                    checarBingo(false);
                 });
             }
             card.appendChild(criar);
         }
     }
 
- // limpa números sorteados
+    // limpa números sorteados
     sorteados = [];
     document.getElementById("sorteado").innerText = "Número sorteado:";
 }
@@ -93,7 +93,7 @@ function checarBingo(mostrarMensagem = true) {
         for (let j = 0; j < 5; j++) {
             const idx = i * 5 + j;
             grid[i][j] = criars[idx].classList.contains("cartelaMarcado") || (i === 2 && j === 2);
-            criars[idx].classList.remove("cartelaBingo"); 
+            criars[idx].classList.remove("cartelaBingo");
         }
     }
 
@@ -101,13 +101,13 @@ function checarBingo(mostrarMensagem = true) {
     const pintarVerde = indices => indices.forEach(idx => criars[idx].classList.add("cartelaBingo"));
 
     for (let i = 0; i < 5; i++)
-        if (grid[i].every(Boolean)) pintarVerde([i*5, i*5+1, i*5+2, i*5+3, i*5+4]);
+        if (grid[i].every(Boolean)) pintarVerde([i * 5, i * 5 + 1, i * 5 + 2, i * 5 + 3, i * 5 + 4]);
 
     for (let j = 0; j < 5; j++)
-        if (grid.every(row => row[j])) pintarVerde([j, j+5, j+10, j+15, j+20]);
+        if (grid.every(row => row[j])) pintarVerde([j, j + 5, j + 10, j + 15, j + 20]);
 
-    if ([0,1,2,3,4].every(i => grid[i][i])) pintarVerde([0,6,12,18,24]);
-    if ([0,1,2,3,4].every(i => grid[i][4-i])) pintarVerde([4,8,12,16,20]);
+    if ([0, 1, 2, 3, 4].every(i => grid[i][i])) pintarVerde([0, 6, 12, 18, 24]);
+    if ([0, 1, 2, 3, 4].every(i => grid[i][4 - i])) pintarVerde([4, 8, 12, 16, 20]);
 
     if (!mostrarMensagem) return;
 
@@ -123,7 +123,7 @@ function checarBingo(mostrarMensagem = true) {
             audio.play();
         }
     } else {
-        res.innerText = "não bingou";
+        res.innerText = "Não bingou";
         res.style.color = "#ff1744";
     }
 }
@@ -131,7 +131,7 @@ function checarBingo(mostrarMensagem = true) {
 // mostra a mensagem de ganhar só quando clicar no botão
 
 function verificarBingo() {
-    checarBingo(true); 
+    checarBingo(true);
 }
 
 gerarCartela();

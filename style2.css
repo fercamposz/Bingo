@@ -7,27 +7,35 @@ body {
     margin: 0px;
     padding: 20px;
 }
+
 .navBar {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 8px 60px;     
+    padding: 8px 60px;
     background-color: #a18eff;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    position: relative;    
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: relative;
     width: 100%;
     top: -20px;
     left: -80px;
 }
 
+nav {
+    display: flex;
+    gap: 90rem;
+    align-items: center;
+}
+
 .logoNav {
     height: 60px;
     display: block;
-    margin: -8px;            
+    margin: -7px;
 }
 
 
 /* botão  */
+
 .btnCartela {
     background-color: #301981;
     color: #ffffff;
@@ -38,12 +46,10 @@ body {
     cursor: pointer;
     margin-right: 80px;
     margin-bottom: 2px;
-    
 }
 
 .btnCartela:hover {
     background-color: #9d75e7;
-
 }
 
 
@@ -62,7 +68,7 @@ body {
     margin-top: 28.5rem;
     z-index: 1;
     position: absolute;
-    left: 89.3rem;
+    left: 57.8rem;
 }
 
 .todo {

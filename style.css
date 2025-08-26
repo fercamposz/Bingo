@@ -8,20 +8,20 @@ body {
     padding: 20px;
 }
 
+
 /* NAV BAR  */
+
 .navBar {
     display: flex;
-    justify-content: space-between;
-    align-items: flex-end;
     padding: 8px 20px;
-    background-color: #a18eff; 
-    border-radius: 0;     
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    background-color: #a18eff;
+    border-radius: 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     position: fixed;
-    top: 0;                
-    left: 0;              
+    top: 0;
+    left: 0;
     width: 100%;
-    z-index: 100;         
+    z-index: 100;
 }
 
 .logoContainer {
@@ -29,15 +29,18 @@ body {
     align-items: center;
 }
 
+
 /* logo da nav */
+
 .logoNav {
-    height: 60px; 
+    height: 60px;
     display: block;
     margin-bottom: -7px;
-   
 }
 
+
 /* botão  */
+
 .btnCartela {
     background-color: #301981;
     color: #ffffff;
@@ -47,17 +50,18 @@ body {
     border-radius: 20px;
     cursor: pointer;
     margin-right: 80px;
-    margin-bottom: 8px;
-    
+    margin-bottom: 2px;
+}
+
+nav {
+    display: flex;
+    gap: 90rem;
+    align-items: center;
 }
 
 .btnCartela:hover {
     background-color: #9d75e7;
-
 }
-
-
-
 
 h1 {
     color: #ff66b2;
@@ -121,7 +125,7 @@ h1 {
 }
 
 .cartelaBingo {
-    background-color: #7ff3cc !important; 
+    background-color: #7ff3cc !important;
     color: white;
     font-weight: bold;
 }
@@ -144,6 +148,10 @@ h1 {
     transform: scale(1.05);
 }
 
+.botoes {
+    margin-top: -120px;
+}
+
 .sorteado {
     margin-top: 15px;
     font-size: 30px;
@@ -161,5 +169,6 @@ h1 {
 .resultado {
     font-size: 80px;
     font-weight: bold;
+    margin-bottom: 10rem;
+    margin-top: -10rem;
 }
-

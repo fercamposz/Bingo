@@ -1,29 +1,30 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Bingou</title>
-        <link rel="stylesheet" href="style.css" />
-        <script src="script.js" defer></script>
-    </head>
 
-    <body>
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bingou</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+</head>
 
+<body>
+    <main class="bingoContainer">
         <header class="navBar">
-            <div class="logoContainer">
-                <img src="./imagens/logo.png" alt="Logo" class="logoNav" />
-            </div>
+            <nav>
+                <div class="logoContainer">
+                    <img src="./imagens/logo.png" alt="Logo" class="logoNav" />
+                </div>
                 <a href="index2.html">
                     <button class="btnCartela">SORTEADOR</button>
                 </a>
+            </nav>
         </header>
 
+        <!-- CARTELA DE BINGO -->
+        <div class="bingoCard" id="bingoCard"></div>
 
-        <main class="bingoContainer">
-            <!-- CARTELA DE BINGO -->
-            <div class="bingoCard" id="bingoCard"></div>
-        </main>
 
         <!-- RESULTADO -->
         <div class="resultado" id="resultado"></div>
@@ -36,14 +37,14 @@
         </div>
 
         <!-- NÚMERO SORTEADO -->
-        <div class="sorteado" id="sorteado">
-            Número sorteado:
-        </div>
+        <div class="sorteado" id="sorteado">Número sorteado:</div>
 
         <!-- FRASE -->
         <div class="frase" id="frase"></div>
 
         <!-- ÁUDIO -->
         <audio id="audioBingo" src="bingou.mp3"></audio>
-    </body>
+    </main>
+</body>
+
 </html>
