@@ -1,58 +1,83 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Sorteador Bingo</title>
+        <link rel="stylesheet" href="style2.css" />
+        <script src="script2.js" defer></script>
+    </head>
+    <body>
+        <!-- nav bar -->
+        <header class="navBar">
+            <div class="logoContainer">
+                <img src="./imagens/logo.png" alt="Logo" class="logoNav" />
+            </div>
+                <a href="index.html">
+                    <button class="btnCartela">CARTELA</button>
+                </a>
+        </header>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sorteador Bingo</title>
-    <link rel="stylesheet" href="style2.css">
-</head>
+        <!-- SEÇÃO PRINCIPAL -->
+        <main class="todo">
+            <!-- NUMERO SORTEADO -->
+            <div id="bola"></div>
 
-<body>
+            <!-- IMAGEM DO SORTEADOR -->
+            <div class="foto">
+                <img src="./imagens/sortear.png" alt="sorteador" />
+            </div>
 
-    <div class="todo">
-        <div id="bola"></div>
+            <!-- BOTÕES -->
+            <div class="botoes">
+                <button class="btn" onclick="sortear()">
+                    Sortear
+                </button>
+                <button class="btn" onclick="zerar()">
+                    Zerar
+                </button>
+            </div>
+        </main>
 
-        <div class="foto">
-            <img src="sortear.png" alt="sorteador" />
-        </div>
+        <!-- MENSAGEM -->
+        <div id="mensagem"></div>
 
-        <div class="botoes">
-            <button class="btn" onclick="sortear()">Sortear</button>
-            <button class="btn" onclick="zerar()">Zerar</button>
-        </div>
+        <!-- LETRAS DO BINGO -->
+        <section id="bingoBoard">
+            <!-- COLUNA B -->
+            <div class="coluna">
+                <div class="letra">B</div>
 
-    </div>
+                <div id="colB" class="numeros"></div>
+            </div>
 
-    <div id="mensagem"></div>
+            <!-- COLUNA I -->
+            <div class="coluna">
+                <div class="letra">I</div>
 
+                <div id="colI" class="numeros"></div>
+            </div>
 
-    <!--- letras do bingo ----->
-    <div id="bingoBoard">
-        <div class="coluna">
-            <div class="letra">B</div>
-            <div id="col-B" class="numeros"></div>
-        </div>
-        <div class="coluna">
-            <div class="letra">I</div>
-            <div id="col-I" class="numeros"></div>
-        </div>
-        <div class="coluna">
-            <div class="letra">N</div>
-            <div id="col-N" class="numeros"></div>
-        </div>
-        <div class="coluna">
-            <div class="letra">G</div>
-            <div id="col-G" class="numeros"></div>
-        </div>
-        <div class="coluna">
-            <div class="letra">O</div>
-            <div id="col-O" class="numeros"></div>
-        </div>
-    </div>
+            <!-- COLUNA N -->
+            <div class="coluna">
+                <div class="letra">N</div>
 
+                <div id="colN" class="numeros"></div>
+            </div>
 
-    <script src="script2.js"></script>
-</body>
+            <!-- COLUNA G -->
+            <div class="coluna">
+                <div class="letra">G</div>
 
+                <div id="colG" class="numeros"></div>
+            </div>
+
+            <!-- COLUNA O -->
+            <div class="coluna">
+                <div class="letra">O</div>
+                
+                <div id="colO" class="numeros"></div>
+            </div>
+        </section>
+    </body>
 </html>

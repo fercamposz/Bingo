@@ -2,10 +2,48 @@ body {
     font-family: 'Comic Sans MS', cursive, sans-serif;
     background-color: #d6caff;
     text-align: center;
-    background-image: url("fundo.png");
+    background-image: url("./imagens/fundo.png");
     background-position: center;
     margin: 0px;
     padding: 20px;
+}
+.navBar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 60px;     
+    background-color: #a18eff;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    position: relative;    
+    width: 100%;
+    top: -20px;
+    left: -80px;
+}
+
+.logoNav {
+    height: 60px;
+    display: block;
+    margin: -8px;            
+}
+
+
+/* botão  */
+.btnCartela {
+    background-color: #301981;
+    color: #ffffff;
+    font-weight: bold;
+    border: none;
+    padding: 10px 25px;
+    border-radius: 20px;
+    cursor: pointer;
+    margin-right: 80px;
+    margin-bottom: 2px;
+    
+}
+
+.btnCartela:hover {
+    background-color: #9d75e7;
+
 }
 
 

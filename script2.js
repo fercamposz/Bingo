@@ -1,7 +1,8 @@
+//  variavel global
 let numeros = Array.from({ length: 75 }, (_, i) => i + 1);
 let sorteados = [];
 
-// letra do bingo de acordo com a regra
+// retorna letra do bingo 
 function getLetra(num) {
     if (num <= 15) return "B";
     if (num <= 30) return "I";
@@ -10,9 +11,10 @@ function getLetra(num) {
     return "O";
 }
 
+// sorteia um número e exibe 
 function sortear() {
     if (numeros.length === 0) {
-        document.getElementById("mensagem").innerText = " Acabou os números!";
+        document.getElementById("mensagem").innerText = "Acabou os números!";
         return;
     }
 
@@ -22,21 +24,23 @@ function sortear() {
 
     const letra = getLetra(num);
 
-    // exibe no centro o numro
+    // Exibe no centro o número sorteado
     document.getElementById("bola").innerText = letra + " " + num;
 
-    // adiciona na coluna certa
+    
     const div = document.createElement("div");
     div.classList.add("numero");
     div.innerText = num;
-    document.getElementById("col-" + letra).appendChild(div);
+    document.getElementById("col" + letra).appendChild(div);
 }
 
-// zera os numeros sorteados e começa denovo
+// recomeça o jogo
 function zerar() {
     numeros = Array.from({ length: 75 }, (_, i) => i + 1);
     sorteados = [];
     document.getElementById("bola").innerText = "";
     document.getElementById("mensagem").innerText = "";
-    document.querySelectorAll(".numeros").forEach(c => c.innerHTML = "");
+    document.querySelectorAll(".numeros").forEach(c => {
+        c.innerHTML = "";
+    });
 }
